@@ -18,6 +18,8 @@ img {
 
 .btn {
     border-width: medium;
+    width: 100px;
+    height: 50px;
 }
 
 /** Para la vista de celular**/

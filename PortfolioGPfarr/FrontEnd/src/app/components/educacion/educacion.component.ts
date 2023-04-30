@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class EducacionComponent implements OnInit {
   educacion: Educacion[] = [];
-
+  
   constructor(private educacionS: EducacionService, private tokenService: TokenService) { }
   isLogged = false;
 
@@ -24,7 +24,7 @@ export class EducacionComponent implements OnInit {
   }
 
   cargarEducacion() : void {
-    this.educacionS.lista().subscribe(data =>{this.educacion = data;})
+    this.educacionS.lista().subscribe(data =>{this.educacion = data})
   }
 
   delete(id?: number){

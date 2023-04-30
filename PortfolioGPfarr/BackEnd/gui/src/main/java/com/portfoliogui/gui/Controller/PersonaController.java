@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/persona")/*quité s final--cambié persona por auth*/
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")/*faltaban dos puntos desp de http*/
 public class PersonaController {
     @Autowired
     ImpPersonaService personaService;
@@ -33,7 +33,7 @@ public class PersonaController {
     
     @GetMapping("/detail/{id}")
     public ResponseEntity<Persona> getById(@PathVariable("id")int id){
-        if(!personaService.existsById(id)){/*aquí llave y cerraba en 44*/
+        if(!personaService.existsById(id)){/*faltaban las llaves*/
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.BAD_REQUEST);
         }
         

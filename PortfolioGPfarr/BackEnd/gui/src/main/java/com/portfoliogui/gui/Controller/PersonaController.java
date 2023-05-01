@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/persona")/*quité s final--cambié persona por auth*/
-@CrossOrigin(origins = "http://localhost:4200")/*faltaban dos puntos desp de http*/
+@CrossOrigin(origins = "https://frontend-gui.web.app")/*faltaban dos puntos desp de http*/
 public class PersonaController {
     @Autowired
     ImpPersonaService personaService;

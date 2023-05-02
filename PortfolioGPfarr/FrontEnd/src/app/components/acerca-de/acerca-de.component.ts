@@ -9,7 +9,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  persona: persona =  new persona("","","","");/* si reemplazas por null no trae data*/
+  persona: persona =  null; /* si reemplazas por null no trae data*/
   
 
   constructor(private personaService: PersonaService, private tokenService: TokenService) { }

@@ -12,9 +12,8 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class EditAcercaDeComponent implements OnInit {
   persona: persona = null;
 
-  constructor( 
+  constructor( private activatedRouter: ActivatedRoute,
     private personaService: PersonaService,
-    private activatedRouter: ActivatedRoute,
     private router: Router,
     public imageService: ImageService ) { }
 
@@ -45,11 +44,11 @@ export class EditAcercaDeComponent implements OnInit {
 
  
 
-  uploadImage($event:any){
+  uploadImage($event: any){
     
     const id = this.activatedRouter.snapshot.params['id'];
     const name = "perfil_" + id;
-    this.imageService.uploadImage($event, name)
+    this.imageService.uploadImage($event);
 
   }
     
